@@ -92,6 +92,7 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
     * prints (using post-order traversal) all nodes in the "whole" tree */
    public void postorderTraverse()
    {
+      postorderTraverse(getRootNode());
    }
    
    /** A Recursive Method in the BinaryTree Class   
