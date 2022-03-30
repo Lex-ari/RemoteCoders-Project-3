@@ -28,7 +28,7 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    public BinaryTree(String preFixExpression, String inFixExpression){
       int inFixRootIndex = inFixExpression.indexOf(preFixExpression.charAt(0));
       BinaryNode<T> root = new BinaryNode();
-      if (preFixExpression.length() == 1){
+      if (preFixExpression.length() >= 1){
          BinaryTree<T> leftTree = new BinaryTree(preFixExpression.substring(1,inFixRootIndex),inFixExpression.substring(0,inFixRootIndex)); // noninclusive of root node
          BinaryTree<T> rightTree = new BinaryTree(preFixExpression.substring(inFixRootIndex + 1),inFixExpression.substring(inFixRootIndex + 1)); // noninclusive of root node
          root.setLeftChild(leftTree.getRootNode());
