@@ -124,7 +124,7 @@ class BinaryNode<T>
    {
       if(node == null)
          return  1 + Math.max(getHeight_binaryNodeMethod(node.getLeftChild()), getHeight_binaryNodeMethod(node.getRightChild()));
-
+      return 0;
    }// end getHeight
 
    
