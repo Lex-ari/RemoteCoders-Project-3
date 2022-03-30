@@ -17,6 +17,17 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
       initializeTree(rootData, leftTree, rightTree);
    } // end constructor
 
+   /**
+    * Extra Credit Opportunity. Constructor that takes in a prefix expression and infix expression and creates a tree.
+    * Assumptions are made here. the preFixExpression and the inFixExpression are guaranteed to create a tree.
+    * Each node is represented by a "letter" in the prefix and infix strings.
+    * @param preFixExpression of the tree.
+    * @param inFixExpression of the tree.
+    */
+   public BinaryTree(String preFixExpression, String inFixExpression){
+
+   }
+
    public void setTree(T rootData, BinaryTreeInterface<T> leftTree,
                                    BinaryTreeInterface<T> rightTree)
    {
