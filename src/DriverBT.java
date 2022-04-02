@@ -46,6 +46,13 @@ public class DriverBT
 		System.out.println("(BinaryNode) # nodes of tree is " + aTree2.getNumberOfNodes_callBinaryNodeMethod());
 		
 		System.out.println("Done.");
+
+		BinaryTree<Character> extraCreditTree = new BinaryTree<Character>("ABDHIECFGJK","HDIBEAFCJGK");
+		extraCreditTree.postorderTraverse();
+		System.out.println();
+		extraCreditTree.postorderTraverse_callBinaryNodeMethod();
+
+
 	}  // end main
 
 	public static void createTree1(BinaryTree<String> tree)
