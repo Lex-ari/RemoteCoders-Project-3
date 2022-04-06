@@ -192,7 +192,7 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    public int getHeight_callBinaryNodeMethod()
    {
       int height = 0;
-      if(isEmpty()) {
+      if(isEmpty()){
          throw new EmptyTreeException();
       }else if(root != null)
          height = root.getHeight_BinaryNodeMethod();
