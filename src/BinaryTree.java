@@ -113,10 +113,26 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    {
       postorderTraverse(getRootNode());
    }
+   protected String postorderTraverse_test()
+   {
+      return postorderTraverse_test(getRootNode());
+   }
 
    /** A Recursive Method in the BinaryTree Class
     * prints (using post-order traversal) all nodes in the subtree rooted at this node.*/
    private void postorderTraverse(BinaryNode<T> node)
+   {
+      if (node != null) {
+         if (node.hasLeftChild()) {
+            postorderTraverse(node.getLeftChild());
+         }
+         if (node.hasRightChild()) {
+            postorderTraverse(node.getRightChild());
+         }
+         System.out.print(node.getData());
+      }
+   }
+   protected String postorderTraverse_test(BinaryNode<T> node)
    {
       if (node != null) {
          if (node.hasLeftChild()) {
@@ -137,6 +153,13 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
          root.postorderTraverse_binaryNodeMethod();
       }
    }
+   protected String postorderTraverse_callBinaryNodeMethod_test()
+   {
+      if (root != null){
+         root.postorderTraverse_binaryNodeMethod();
+      }
+   }
+
 
    /** -------------------------------------------------------------------- */
    /** Task 2: Implement the 2 methods
@@ -206,6 +229,17 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
 
       return 1 + leftNumber + rightNumber;
    } // end getNumberOfNodes
+   protected int getNumberOfNodes_test(BinaryNode<T> node)
+   {
+      int leftNumber = 0;
+      int rightNumber = 0;
+      if (node.hasLeftChild())
+         leftNumber=getNumberOfNodes(node.getLeftChild());
+      if (node.hasRightChild())
+         rightNumber = getNumberOfNodes(node.getRightChild());
+
+      return 1 + leftNumber + rightNumber;
+   } 
 
    /** The following calls getNumberOfNodes_binaryNodeMethod() which is a recursive binaryNode class method
     * Counts the nodes in the "whole" tree

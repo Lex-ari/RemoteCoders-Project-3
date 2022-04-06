@@ -114,6 +114,16 @@ class BinaryNode<T>
       }
       System.out.print(getData());
    }
+   protected String postorderTraverse_binaryNodeMethod_test()
+   {
+      if (hasLeftChild()){
+         leftChild.postorderTraverse_binaryNodeMethod();
+      }
+      if (hasRightChild()){
+         rightChild.postorderTraverse_binaryNodeMethod();
+      }
+      System.out.print(getData());
+   }
 
    /**--------------------------------------------------------------------
     * Part of Task 2*/

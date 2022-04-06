@@ -21,22 +21,40 @@ public class JUnitTesting{
 
         BinaryTree<String> tree = new BinaryTree<>("A", bTree, cTree);
 
+        BinaryNode<String> fNode = new BinaryNode<>("F");
+		BinaryNode<String> gNode = new BinaryNode<>("G");
+        BinaryNode<String> hNode = new BinaryNode<>("H");
+		BinaryNode<String> bNode = new BinaryNode<>("B");
+
+		// Subtrees:
+        BinaryNode<String> dNode = new BinaryNode<>("D", fNode, null);
+		BinaryNode<String> eNode = new BinaryNode<>("E", gNode, hNode);
+        BinaryNode<String> cNode = new BinaryNode<>("C", dNode, eNode);
+
+        BinaryNode<String> nodeTree = new BinaryNode<>("A", bNode, cNode);
 
     public void tryPostOrderTraverse(){
-        assertEquals("B F D G H E C A", tree.postorderTraverse());
+        assertEquals("BFDGHECA", tree.postorderTraverse_test());
+        assertEquals("BFDGHECA", tree.postorderTraverse_test(tree.getRootNode()));
+        assertEquals("BFDGHECA", tree.postorderTraverse_callBinaryNodeMethod_test());
+        assertEquals("BFDGHECA", nodeTree.postorderTraverse_binaryNodeMethod_test());
+
     }
-    public void tryGetHeight_callBinaryMethod(){
-        assertEquals(4, tree.getHeight());
+    public void tryGetHeightMethods(){
+        assertEquals(4, tree.getHeight_callBinaryNodeMethod());
+        assertEquals(4, nodeTree.getHeight_binaryNodeMethod(tree.getRootNode()));
     }
     public void tryGetNumberOfNodes(){
         assertEquals(8, tree.getNumberOfNodes());
-        assertEquals(8, tree.postorderTraverse_callBinaryNodeMethod())
-    }
-    public void tryCreateTree2(){
-        
+        assertEquals(8, tree.getNumberOfNodes_test(tree.getRootNode()));
     }
     public void tryECBinaryTree(){
-
+        try{
+            BinaryTree<Character> extraCreditTree = new BinaryTree<Character>("ABDHIECFGJK", "HDIBEAFCJGK");
+        }
+        catch (Exception e){
+            throw e;
+        }
     }
 
     
