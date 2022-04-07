@@ -1,7 +1,14 @@
-public class DriverBT 
+import org.junit.runner.JUnitCore;
+import org.junit.runner.notification.Failure;
+import org.junit.runner.Result;
+
+
+public class DriverBT
 {
 	public static void main(String[] args)
 	{
+		runJUnitTests();
+
 		System.out.println("1st Testing Example:");
 		BinaryTree<String> aTree = new BinaryTree<>();
 		createTree1(aTree);
@@ -107,5 +114,13 @@ public class DriverBT
       System.out.println("    F     G    H");
       System.out.println();
 	} // end createTree2
+
+	public static void runJUnitTests(){
+		Result result = JUnitCore.runClasses(JUnitTesting.class);
+		for (Failure failure : result.getFailures()){
+			System.out.println(failure.toString());
+		}
+		System.out.println("JUnit Tests: Binary Tree test cases were successful? = " + result.wasSuccessful());
+	}
 
 }  // end DriverBT
