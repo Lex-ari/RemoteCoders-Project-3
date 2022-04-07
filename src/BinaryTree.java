@@ -143,7 +143,7 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
          }
          return (String)node.getData();
       }
-      return "null node";
+      return "";
    }
 
    /** The following calls postorderTraverse_binaryNodeMethod(), which is a recursive binaryNode class method
@@ -157,8 +157,9 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    protected String postorderTraverse_callBinaryNodeMethod_test()
    {
       if (root != null){
-         root.postorderTraverse_binaryNodeMethod();
+         return root.postorderTraverse_binaryNodeMethod_test();
       }
+      return "";
    }
 
 
