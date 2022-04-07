@@ -26,13 +26,15 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
     * @param inFixExpression of the tree.
     */
    public BinaryTree(String preFixExpression, String inFixExpression){
-      int inFixRootIndex = inFixExpression.indexOf(preFixExpression.charAt(0));
-      root = new BinaryNode(preFixExpression.charAt(0));
-      if (preFixExpression.length() > 1){
-         BinaryTree<T> leftTree = new BinaryTree(preFixExpression.substring(1,inFixRootIndex + 1),inFixExpression.substring(0,inFixRootIndex)); // noninclusive of root node
-         BinaryTree<T> rightTree = new BinaryTree(preFixExpression.substring(inFixRootIndex + 1),inFixExpression.substring(inFixRootIndex + 1)); // noninclusive of root node
-         root.setLeftChild(leftTree.getRootNode());
-         root.setRightChild(rightTree.getRootNode());
+      if (!preFixExpression.isEmpty()) {
+         int inFixRootIndex = inFixExpression.indexOf(preFixExpression.charAt(0));
+         root = new BinaryNode(preFixExpression.charAt(0));
+         if (preFixExpression.length() > 1) {
+            BinaryTree<T> leftTree = new BinaryTree(preFixExpression.substring(1, inFixRootIndex + 1), inFixExpression.substring(0, inFixRootIndex)); // noninclusive of root node
+            BinaryTree<T> rightTree = new BinaryTree(preFixExpression.substring(inFixRootIndex + 1), inFixExpression.substring(inFixRootIndex + 1)); // noninclusive of root node
+            root.setLeftChild(leftTree.getRootNode());
+            root.setRightChild(rightTree.getRootNode());
+         }
       }
    }
 
