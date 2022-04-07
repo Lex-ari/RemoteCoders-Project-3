@@ -6,7 +6,7 @@ Contributions
 
 Koki Yamaguchi: Implemented all parts of task 2
 
-Iker Goni: 
+Iker Goni: Implemented all parts of task 3 and 4, implemented JUnitTesting.java
 
 Alex Mariano: Implemented all parts of Task 1, implemented "extra credit" binary tree constructor in BinaryTree.java.
 
