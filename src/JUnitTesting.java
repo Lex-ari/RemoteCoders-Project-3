@@ -33,6 +33,9 @@ public class JUnitTesting{
     BinaryNode<String> nodeTree = new BinaryNode<>("A", bNode, cNode);
 
     @Test
+    /**
+     * tests the postorderTraverse methods using the tree and node tree
+     */
     public void tryPostOrderTraverse(){
         assertEquals("BFDGHECA", tree.postorderTraverse_test());
         assertEquals("BFDGHECA", tree.postorderTraverse_test(tree.getRootNode()));
@@ -41,16 +44,25 @@ public class JUnitTesting{
 
     }
     @Test
+    /**
+     * tests the getHeightMethods for binary trees and binary nodes
+     */
     public void tryGetHeightMethods(){
         assertEquals(4, tree.getHeight_callBinaryNodeMethod());
         assertEquals(4, nodeTree.getHeight_BinaryNodeMethod());
     }
     @Test
+    /**
+     * tests the getNumberOfNodes method using the tree and node tree
+     */
     public void tryGetNumberOfNodes(){
         assertEquals(8, tree.getNumberOfNodes());
         assertEquals(8, tree.getNumberOfNodes_test(tree.getRootNode()));
     }
     @Test
+    /**
+     * tests the constructor for prefix and infix subtrees
+     */
     public void tryECBinaryTree(){
         try{
             BinaryTree<Character> extraCreditTree = new BinaryTree<Character>("ABDHIECFGJK", "HDIBEAFCJGK");

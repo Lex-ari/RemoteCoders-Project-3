@@ -84,6 +84,12 @@ public class DriverBT
 	
 	/**-------------------------------------------------------------------- */
 	/**Task 4: Create a tree case as shown in assignment 3*/
+	/**
+	 * 
+	 * @param tree used to initialize the root with the left and right subtrees
+	 * Hardcodes a tree and prints out the tree as it would look physically
+	 * 
+	 */
 	public static void createTree2(BinaryTree<String> tree)
 	{ 
 		// Leaves
