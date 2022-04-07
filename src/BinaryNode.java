@@ -123,7 +123,6 @@ class BinaryNode<T>
          rightChild.postorderTraverse_binaryNodeMethod();
       }
       System.out.print(getData());
-
    }
 
    /**--------------------------------------------------------------------
@@ -147,8 +146,7 @@ class BinaryNode<T>
    /** A Recursive Method in the BinaryNode Class
     * Counts the nodes in the subtree rooted at "this" node.
     @return  The number of nodes in the subtree rooted at "this" node. */
-   public int getNumberOfNodes_binaryNodeMethod()
-   {
+   public int getNumberOfNodes_binaryNodeMethod(){
       int leftNumber = 0;
       int rightNumber = 0;
       if (leftChild != null)
