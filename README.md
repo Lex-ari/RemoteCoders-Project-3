@@ -4,7 +4,7 @@ Koki Yamaguchi, Iker Goni, Alex Mariano
 
 Contributions
 
-Koki Yamaguchi: 
+Koki Yamaguchi: Implemented all parts of task 2
 
 Iker Goni: 
 
