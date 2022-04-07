@@ -123,6 +123,7 @@ class BinaryNode<T>
          rightChild.postorderTraverse_binaryNodeMethod();
       }
       System.out.print(getData());
+
    }
 
    /**--------------------------------------------------------------------
@@ -137,9 +138,8 @@ class BinaryNode<T>
          return 1 + Math.max(this.getLeftChild().getHeight_BinaryNodeMethod(), this.getRightChild().getHeight_BinaryNodeMethod());
 
       }if(this.getLeftChild() != null){
-         value = 1 + Math.max(this.getLeftChild().getHeight_BinaryNodeMethod(), this.getRightChild().getHeight_BinaryNodeMethod());
+         return 1 + Math.max(this.getLeftChild().getHeight_BinaryNodeMethod(), this.getRightChild().getHeight_BinaryNodeMethod());
 
-      return value;
    }// end getHeight
 
 
