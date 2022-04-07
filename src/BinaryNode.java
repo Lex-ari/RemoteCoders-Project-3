@@ -122,7 +122,7 @@ class BinaryNode<T>
       if (hasRightChild()){
          rightChild.postorderTraverse_binaryNodeMethod();
       }
-      System.out.print(getData());
+      return (String)getData();
    }
 
    /**--------------------------------------------------------------------
