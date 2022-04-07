@@ -54,12 +54,7 @@ public class DriverBT
 		
 		System.out.println("Done.");
 
-		BinaryTree<Character> extraCreditTree = new BinaryTree<Character>("ABDHIECFGJK","HDIBEAFCJGK");
-		extraCreditTree.postorderTraverse();
-		System.out.println();
-		extraCreditTree.postorderTraverse_callBinaryNodeMethod();
-
-
+		createTree3();
 	}  // end main
 
 	public static void createTree1(BinaryTree<String> tree)
@@ -114,6 +109,32 @@ public class DriverBT
       System.out.println("    F     G    H");
       System.out.println();
 	} // end createTree2
+
+	public static void createTree3(){
+		System.out.println("\nCreating a binary tree using preFix and inFix expressions");
+		System.out.println("\nGiven Tree:\n");
+		System.out.println("			A			");
+		System.out.println("		 /	   \\  		");
+		System.out.println("		B		C  		");
+		System.out.println("	   / \\	   / \\		");
+		System.out.println("	  D	  E	  F	  G");
+		System.out.println(" 	 / \\		 / \\");
+		System.out.println("	H   I 	    J 	K");
+		System.out.println();
+
+		System.out.println("Prefix: ABDHIECFGJK");
+		System.out.println("Infix: HDIBEAFCJGK");
+		try {
+			BinaryTree<Character> extraCreditTree = new BinaryTree<Character>("ABDHIECFGJK", "HDIBEAFCJGK");
+			System.out.print("PostorderTraverse():");
+			extraCreditTree.postorderTraverse();
+			System.out.println();
+			System.out.println("PostorderTraverse_callBinaryNodeMethod()");
+			extraCreditTree.postorderTraverse_callBinaryNodeMethod();
+		} catch (Exception e){
+			System.out.println("Binary Tree constructor using preFix and inFix failed with exception: e");
+		}
+	}
 
 	public static void runJUnitTests(){
 		Result result = JUnitCore.runClasses(JUnitTesting.class);
