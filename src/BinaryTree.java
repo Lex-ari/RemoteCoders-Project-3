@@ -141,8 +141,9 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
          if (node.hasRightChild()) {
             postorderTraverse(node.getRightChild());
          }
-         System.out.print(node.getData());
+         return (String)node.getData();
       }
+      return "null node";
    }
 
    /** The following calls postorderTraverse_binaryNodeMethod(), which is a recursive binaryNode class method
