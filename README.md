@@ -14,6 +14,6 @@ Extra Implementations: Junit framework. "Extra Credit" Binary Tree constructor, 
 
 Screencast Video: https://www.youtube.com/watch?v=LqQOhwVv0ss
 
-Javadoc: https://lex-ari.github.io/RemoteCoders-Project-3/
+Javadoc: https://lex-ari.github.io/RemoteCoders-Project-3/allclasses-index.html
 
 Professor Qichao Dong for CS2400
