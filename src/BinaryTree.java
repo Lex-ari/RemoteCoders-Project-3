@@ -257,5 +257,4 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
          numberOfNodes = root.getNumberOfNodes_binaryNodeMethod();
       return numberOfNodes;
    } // end getNumberOfNodes_callBinaryNodeMethod
-
 } // end BinaryTree

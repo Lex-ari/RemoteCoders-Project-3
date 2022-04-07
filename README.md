@@ -12,8 +12,8 @@ Alex Mariano: Implemented all parts of Task 1, implemented "extra credit" binary
 
 Extra Implementations: Junit framework. "Extra Credit" Binary Tree constructor, which creates a binary tree using a preFixExpression string and an inFixExpression string.
 
-Screencast Video: 
+Screencast Video: https://www.youtube.com/watch?v=LqQOhwVv0ss
 
-Javadoc: 
+Javadoc: https://lex-ari.github.io/RemoteCoders-Project-3/allclasses-index.html
 
 Professor Qichao Dong for CS2400
